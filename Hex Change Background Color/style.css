@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Franklin';
+    src: url(font/Franklin\ Gothic\ Medium\ Regular.ttf);
+  }
+body{
+  background-color:#55585f
+  ;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45vh;
+  display: grid;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px dodgerblue solid;
+  border-radius: 50px;
+  margin: 5px 5px;
+  padding: 10px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 5px 3px 50px gray;
+}
+.pulse:active {
+  animation: pulse 0.7s;
+  box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 dodgerblue;
+  }
+}
+*{
+  font-family: 'Franklin';
+}

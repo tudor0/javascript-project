@@ -1,0 +1,40 @@
+:root {
+  --lightBlue: #95b8d1;
+  --mainwhite: #f5f5f5;
+  --mainBlack: #333333;
+}
+@font-face {
+  font-family: 'Franklin';
+  src: url(font/Franklin\ Gothic\ Medium\ Regular.ttf);
+}
+.max-height {
+  min-height: 100vh;
+}
+body {
+  background: var(--lightBlue);
+}
+.message-container {
+  background: var(--mainwhite);
+}
+.message-content {
+  color: var(--lightBlue);
+}
+#submitBtn {
+  background: var(--lightBlue);
+  color: var(--mainwhite);
+}
+#submitBtn:hover {
+  color: var(--lightBlue);
+  color: var(--mainBlack);
+}
+
+.feedback {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+*{
+  font-family: 'Franklin';
+}
