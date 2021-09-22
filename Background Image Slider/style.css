@@ -12,6 +12,6 @@ body {
 }
 
 button {
-  /* border: none; */
-  
+  background: none;
+  border: none;
 }
