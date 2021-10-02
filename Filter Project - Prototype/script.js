@@ -24,7 +24,7 @@ input.addEventListener("keyup", () => {
   const tagsearch = input.value.toLowerCase();
   let filter = [];
   items.forEach((item) => {
-    if (item.tag.toLowerCase().includes(tagsearch)) filter.push(item.name);
+    if (item.name.toLowerCase().includes(tagsearch)) filter.push(item.name);
   });
   text.textContent = filter;
 });
