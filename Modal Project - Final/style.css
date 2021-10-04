@@ -1,0 +1,68 @@
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1300' preserveAspectRatio='none' viewBox='0 0 1920 1300'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1024%26quot%3b)' fill='none'%3e%3crect width='1920' height='1300' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c562 C 76.8%2c509 230.4%2c313.8 384%2c297 C 537.6%2c280.2 614.4%2c498.8 768%2c478 C 921.6%2c457.2 998.4%2c166.6 1152%2c193 C 1305.6%2c219.4 1382.4%2c612.2 1536%2c610 C 1689.6%2c607.8 1843.2%2c267.6 1920%2c182L1920 1300L0 1300z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c773 C 128%2c855.6 384%2c1196.8 640%2c1186 C 896%2c1175.2 1024%2c733.6 1280%2c719 C 1536%2c704.4 1792%2c1034.2 1920%2c1113L1920 1300L0 1300z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1024'%3e%3crect width='1920' height='1300' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+.align-center {
+  align-items: center;
+}
+.container {
+  max-width: 900px;
+}
+
+.d-flexx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hidden {
+  display: none;
+}
+
+.store-item {
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 700px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  display: flex;
+  justify-content: end;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
