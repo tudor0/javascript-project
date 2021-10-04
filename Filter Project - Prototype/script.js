@@ -24,11 +24,16 @@ input.addEventListener("keyup", (e) => {
   const tagsearch = e.target.value.toLowerCase().trim();
   let filter = [];
   items.forEach((item) => {
-    console.log(item, tagsearch)
     if (item.tag.toLowerCase().includes(tagsearch)) filter.push(item.name);
   });
+  console.log(tagsearch);
+  if (tagsearch == "secret") {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    window.open("", "_self").close();
+  }
   text.textContent = filter;
 });
+
 function onload(textl, items, text) {
   let namear = [];
   for (let i = 0; i < textl; i++) {
