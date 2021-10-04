@@ -8,7 +8,7 @@ const items = [
   },
   {
     name: "Biscuits ",
-    tag: "salty",
+    tag: "crunchy",
   },
   {
     name: "HTML ",
@@ -20,11 +20,12 @@ const items = [
   },
 ];
 const textl = items.length;
-input.addEventListener("keyup", () => {
-  const tagsearch = input.value.toLowerCase();
+input.addEventListener("keyup", (e) => {
+  const tagsearch = e.target.value.toLowerCase().trim();
   let filter = [];
   items.forEach((item) => {
-    if (item.name.toLowerCase().includes(tagsearch)) filter.push(item.name);
+    console.log(item, tagsearch)
+    if (item.tag.toLowerCase().includes(tagsearch)) filter.push(item.name);
   });
   text.textContent = filter;
 });
