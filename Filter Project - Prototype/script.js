@@ -29,7 +29,6 @@ input.addEventListener("keyup", (e) => {
   console.log(tagsearch);
   if (tagsearch == "secret") {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
-    window.open("", "_self").close();
   }
   text.textContent = filter;
 });

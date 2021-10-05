@@ -66,3 +66,23 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+.flex {
+  display: flex;
+  margin-left: -42px;
+  border: none;
+}
+
+.flex img {
+  width: 98%;
+  align-items: center;
+}
+
+.flex button {
+  border: none;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  height: 50px;
+  margin-top: 220px;
+  
+}
