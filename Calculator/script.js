@@ -12,10 +12,8 @@ function display(num) {
     } else result.value = result.value + num;
   } else {
     // This checks if two consecutive inputs are signs, and prevents that from happening
-
     const lastChar = result.value.charAt(i - 1);
-    console.log("Last char ", lastChar);
-    console.log("Current number ", num);
+
     if (
       lastChar == "+" ||
       lastChar == "-" ||
@@ -46,10 +44,11 @@ function calculate() {
   const evaluate = parse(result.value);
   if (evaluate == 0) {
     result.value = "";
+    i = 0;
   } else {
     result.value = evaluate;
+    i = evaluate.toString().length;
   }
-  i = evaluate.toString().length;
 }
 function parse(str) {
   return Function(`'use strict'; return (${str})`)();
