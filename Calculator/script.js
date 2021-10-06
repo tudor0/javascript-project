@@ -43,8 +43,14 @@ function clearScreen() {
 
 function calculate() {
   i = 0;
-  const evaluate = eval(result.value);
-  console.log("eval", evaluate);
-  result.value = evaluate;
+  const evaluate = parse(result.value);
+  if (evaluate == 0) {
+    result.value = "";
+  } else {
+    result.value = evaluate;
+  }
   i = evaluate.toString().length;
+}
+function parse(str) {
+  return Function(`'use strict'; return (${str})`)();
 }
