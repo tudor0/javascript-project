@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: steelblue;
+}
+.form-control{
+    border: 1px solid #000;
+}
+button{
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
