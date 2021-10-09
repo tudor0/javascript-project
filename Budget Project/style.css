@@ -8,11 +8,13 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   background-color: #166d3b;
-  background-image: linear-gradient(147deg, #166d3b 0%, #000009 74%);
+  background-image: linear-gradient(147deg, #166d3b 0%, #1a1a3a 74%);
   font-family: "Noto Sans Mono", monospace;
+  overflow-x: hidden;
 }
 .container {
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +46,7 @@ body {
   outline: none;
 }
 .btn5 {
-    margin-top: 20px;
+  margin-top: 20px;
   padding: 16px 48px;
   background: none;
   border: 2px solid #131313;
@@ -62,7 +64,7 @@ body {
   position: absolute;
   width: 100px;
   height: 120%;
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   top: 50%;
   transform: skewX(30deg) translate(-150%, -50%);
   transition: all 0.5s;
@@ -79,17 +81,94 @@ body {
   transition-delay: 0.1s;
 }
 .blink {
-    animation: blink 1s steps(1, end) infinite;
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  50% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Budget Page */
+
+.btn1 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid rgb(0, 255, 0);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn1::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: rgb(0, 255, 0);
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn1:hover::before {
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.btn1:hover {
+  color: #000;
+}
+
+.btn1:active {
+  transform: scale(0.97);
+}
+
+.d-flex {
+  display: flex;
+  max-height: 150px;
+  align-items: center;
+}
+.d-grid {
+  display: grid;
+}
+.form {
+  margin-top: -380px;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+#expName,
+#expAmount {
+  margin-top: 100px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+.list{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+
+.budget{
+  display: grid;
+  justify-content: left;
+  margin-top: -500px;
+}

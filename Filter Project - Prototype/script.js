@@ -1,6 +1,7 @@
 const input = document.getElementById("input");
 const button = document.getElementById("btn");
 const text = document.getElementById("text");
+const audio = document.querySelector("#audio");
 const items = [
   {
     name: "Cupcake ",
@@ -21,6 +22,8 @@ const items = [
 ];
 const textl = items.length;
 input.addEventListener("keyup", (e) => {
+  stopAudio();
+  audio.play();
   const tagsearch = e.target.value.toLowerCase().trim();
   let filter = [];
   items.forEach((item) => {
@@ -41,4 +44,14 @@ function onload(textl, items, text) {
   text.textContent = namear;
 }
 
+// On load
+
 onload(textl, items, text);
+
+button.addEventListener("click", () => {
+  audio.play();
+});
+function stopAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+}
