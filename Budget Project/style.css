@@ -190,7 +190,7 @@ h2 {
   display: grid;
   list-style: none;
   margin-left: -35px;
-  /* flex-direction: column; */
+  min-width: 100vw;
   margin-top: -40px;
 }
 .list-item {
@@ -203,4 +203,7 @@ h2 {
 
 .fa-trash{
   pointer-events: none;
+}
+h3{
+  width: 300px;
 }

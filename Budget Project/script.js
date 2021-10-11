@@ -44,8 +44,8 @@ list.addEventListener("click", deleteCheck);
 
 // Function that adds the expense name and amount as a list item, updating the balance and expenses as well
 function addToExpenseList() {
-  if (expenseName.value === "" || expenseAmount.value === "") return;
-  const expenseDiv = document.createElement("div");
+  if (expenseName.value === "" || expenseAmount.value === "" || expenseAmount.value > 1000000) return;
+  // const expenseDiv = document.createElement("div");
   const li = document.createElement("li");
   li.classList.add("list-item");
   let eName = document.createElement("h3");
@@ -62,10 +62,9 @@ function addToExpenseList() {
   let deleteButton = document.createElement("button");
   deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
   deleteButton.classList.add("trashBtn");
-  li.appendChild(deleteButton);
-
-  expenseDiv.appendChild(li);
-  list.appendChild(expenseDiv);
+  li.appendChild(deleteButton)
+  // list.appendChild(expenseDiv);
+  list.appendChild(li);
 
   balance.innerText = balance.innerText - expenseAmount.value;
   totalExpenses.innerText = expenseAmount.value;
