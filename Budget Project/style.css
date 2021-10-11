@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
   min-width: 100vw;
   min-height: 100vh;
@@ -12,6 +13,7 @@ body {
   font-family: "Noto Sans Mono", monospace;
   overflow-x: hidden;
 }
+
 .container {
   min-height: 100vh;
   max-width: 100vw;
@@ -142,10 +144,17 @@ body {
 .d-grid {
   display: grid;
 }
-.form {
+.form,
+.list {
   margin-top: -380px;
   justify-content: space-around;
   width: 100vw;
+}
+.list {
+  color: whitesmoke;
+}
+.container .list .info {
+  text-align: center;
 }
 
 #expName,
@@ -160,15 +169,38 @@ h2 {
   color: whitesmoke;
 }
 
-.list{
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin-top: 150px;
+#budget {
+  flex-direction: column-reverse;
 }
 
-.budget{
+.titles {
+  /* margin-top: -450px; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 100vw;
+  height: 100%;
+}
+.todo-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.ul {
   display: grid;
-  justify-content: left;
-  margin-top: -500px;
+  list-style: none;
+  margin-left: -35px;
+  /* flex-direction: column; */
+  margin-top: -40px;
+}
+.list-item {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  color: whitesmoke;
+  list-style: none;
+}
+
+.fa-trash{
+  pointer-events: none;
 }

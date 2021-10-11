@@ -31,40 +31,41 @@
         <button class="btn5" id="buttonNext">Next Step</button>
       </a>
     </div>
-    <div class="container" id="budget">
-      <div>
-        <div class="form d-flex">
-          <div class="section d-grid">
-            <h2>Please enter your expense<span class="blink">:</span></h2>
-            <input type="text" id="expName" />
-          </div>
-          <div class="section d-grid">
-            <h2>Please enter the expense amount<span class="blink">:</span></h2>
-            <input type="number" min="1" id="expAmount" />
-          </div>
-          <button class="btn1" id="expenseBtn">Add Expense</button>
+
+    <div id="budget" class="container">
+      <div class="form d-flex">
+        <div class="section d-grid">
+          <h2>Please enter your expense<span class="blink">:</span></h2>
+          <input type="text" id="expName" />
         </div>
+        <div class="section d-grid">
+          <h2>Please enter the expense amount<span class="blink">:</span></h2>
+          <input type="number" min="1" id="expAmount" />
+        </div>
+        <button class="btn1" id="expenseBtn">Add Expense</button>
       </div>
+
       <div class="list d-flex">
-        <div class="budget">
+        <div class="info d-grid">
           <h3>BUDGET</h3>
-          <i class="fa-solid fa-money-bill"></i>
-          <h3>Expense Title</h3>
-          <p class="expense-title">a</p>
+          <!-- <i class="fa-solid fa-money-bill"></i> -->
+          <h2 id="placebudgethere"></h2>
         </div>
-        <div class="budget">
+        <div class="info d-grid">
           <h3>EXPENSES</h3>
-          <i class="fa-solid fa-credit-card"></i>
-          <h3>Expense Value</h3>
-          <p class="expense-value">a</p>
+          <!-- <i class="fa-solid fa-credit-card"></i> -->
+          <h2 id="totalexpenses"></h2>
         </div>
-        <div class="budget">
+        <div class="info d-grid">
           <h3>BALANCE</h3>
-          <i class="fa-solid fa-comment-dollar"></i>
-          <h3>ToolBar</h3>
-          <p class="tools">a</p>
+          <!-- <i class="fa-solid fa-dollar-sign"></i> -->
+          <h2 id="placeinitialbudgethere"></h2>
         </div>
       </div>
+
+      <ul class="ul" id="list-input">
+        
+      </ul>
     </div>
   </body>
 </html>
