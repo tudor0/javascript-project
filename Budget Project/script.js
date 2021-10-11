@@ -75,7 +75,7 @@ function addToExpenseList() {
 function deleteCheck(e) {
   const item = e.target;
   if (item.classList[0] === "trashBtn") {
-    const div = item.parentElement.parentElement;
+    const div = item.parentElement;
     div.remove();
     updateMoney();
   }
