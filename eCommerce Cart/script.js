@@ -115,5 +115,5 @@ function addToCartList(name, price, src) {
 
 function updateTotalPrice(str) {
   sum += parseInt(str);
-  totalpPrice.innerText = sum + '$';
+  totalpPrice.innerText = sum + "$";
 }
