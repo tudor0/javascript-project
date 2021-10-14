@@ -117,3 +117,6 @@ function updateTotalPrice(str) {
   sum += parseInt(str);
   totalpPrice.innerText = sum + "$";
 }
+
+// De modificat : 
+// Updateaza pretul cand scoti un item
