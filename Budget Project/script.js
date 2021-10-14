@@ -44,7 +44,12 @@ list.addEventListener("click", deleteCheck);
 
 // Function that adds the expense name and amount as a list item, updating the balance and expenses as well
 function addToExpenseList() {
-  if (expenseName.value === "" || expenseAmount.value === "" || expenseAmount.value > 1000000) return;
+  if (
+    expenseName.value === "" ||
+    expenseAmount.value === "" ||
+    expenseAmount.value > 1000000
+  )
+    return;
   // const expenseDiv = document.createElement("div");
   const li = document.createElement("li");
   li.classList.add("list-item");
@@ -62,7 +67,7 @@ function addToExpenseList() {
   let deleteButton = document.createElement("button");
   deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
   deleteButton.classList.add("trashBtn");
-  li.appendChild(deleteButton)
+  li.appendChild(deleteButton);
   // list.appendChild(expenseDiv);
   list.appendChild(li);
 
@@ -84,12 +89,14 @@ function deleteCheck(e) {
 function updateMoney() {
   const money = document.querySelectorAll(".amount");
   let change = 0;
-  money.forEach((el) => (change += el.innerText));
+  money.forEach((el) => (change += parseInt(el.innerText)));
+  // money.forEach((el) => (change += parseInt(el.innerText)));
+  // console.log("change", change);
+  if (change === 0) {
+    balance.innerText = salary;
+  }
   totalExpenses.innerText = parseFloat(change);
   // console.log('balance',balance.innerText)
   // console.log('total expenses',parseFloat(totalExpenses.innerText))
   balance.innerText = parseFloat(balance.innerText) + parseFloat(change);
-  if (totalExpenses.innerText === 0) {
-    balance.innerText = salary;
-  }
 }
