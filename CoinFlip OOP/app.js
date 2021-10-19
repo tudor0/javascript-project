@@ -1,27 +1,3 @@
-// jQuery(document).ready(function($){
-
-//     $('#coin').on('click', function(){
-//       var flipResult = Math.random();
-//       $('#coin').removeClass();
-//       setTimeout(function(){
-//         if(flipResult <= 0.5){
-//           $('#coin').addClass('tails');
-//           console.log('it is head');
-//         }
-//         else{
-//           $('#coin').addClass('tails');
-//           console.log('it is tails');
-//         }
-//       }, 3000);
-//     });
-//   });
-
-// player class
-// ui class
-// computer class
-// score object
-// disable la butoane in timpu animatiei
-
 //Choice buttons
 const heads = document.querySelector("#heads");
 const tails = document.querySelector("#tails");
