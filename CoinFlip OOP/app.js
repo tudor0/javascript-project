@@ -85,6 +85,8 @@ class UI {
     }, 3000);
   }
   static resetGame() {
+    heads.disabled = true;
+    tails.disabled = true;
     setTimeout(() => {
       player.score = 0;
       computer.score = 0;
@@ -94,6 +96,8 @@ class UI {
       document.querySelector("#computerChoice").textContent = "";
       playerScoreUI.textContent = 0;
       computerScoreUI.textContent = 0;
+      heads.disabled = false;
+      tails.disabled = false;
     }, 3000);
   }
 }

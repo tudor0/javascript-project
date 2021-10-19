@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>welcome to rock, paper, scissors</h1>
+        <p>
+          Rules: Rock beats scissors, scissors beats paper, paper beats rock and
+          the first to three wins
+        </p>
+      </div>
+      <div class="choices">
+        <div class="player">
+          <h3>Player picked <span class="blink">:</span></h3>
+          <h3 id="playerChoice"></h3>
+        </div>
+        <div class="computer">
+          <h3 id="computerChoice"></h3>
+          <h3><span class="blink">:</span> Computer picked</h3>
+        </div>
+      </div>
+      <div class="winner">
+        <h2 id="change">Choose an option:</h2>
+        <h2 id="winner"></h2>
+      </div>
+      <div class="score">
+        <div class="playerScore">
+          <h2>Player score :</h2>
+          <h2 id="playerScore">0</h2>
+        </div>
+        <div class="computerScore">
+          <h2>Computer score :</h2>
+          <h2 id="computerScore">0</h2>
+        </div>
+      </div>
+      <div class="options">
+        <button id="rock">
+          <i class="fa-regular fa-hand-back-fist fa-10x"></i>
+        </button>
+        <button id="paper"><i class="fa-regular fa-hand fa-10x"></i></button>
+        <button id="scissors">
+          <i class="fa-regular fa-hand-scissors fa-10x"></i>
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

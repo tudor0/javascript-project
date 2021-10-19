@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Qahiri&display=swap");
+body {
+  background: #ff4b1f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1fddff,
+    #ff4b1f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1fddff,
+    #ff4b1f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-height: 100vh;
+  font-family: "Bebas Neue", cursive;
+  display: grid;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 100vh;
+}
+.container .title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .title h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+.container .title p {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.container .choices {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  padding: 10px;
+}
+.container .choices .player {
+  display: flex;
+  align-items: center;
+}
+.container .choices .computer {
+  display: flex;
+  align-items: center;
+}
+.container .winner {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.container .winner :nth-child(1) {
+  padding-right: 10px;
+}
+.container .score {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 200px; */
+  padding-top: 100px;
+}
+.container .score .playerScore,
+.container .score .computerScore {
+  display: flex;
+}
+.container .options {
+  display: flex;
+  justify-content: space-around;
+  /* height: 50vh; */
+  align-items: flex-end;
+  margin-top: 90px;
+}
+.container .options button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .options i {
+  pointer-events: none;
+}
+/* Blinks */
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.white {
+  color: whitesmoke;
+}
+
+#playerScore,
+#computerScore {
+  padding-left: 10px;
+}
