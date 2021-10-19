@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">First to 5 points wins the game!</h1>
+      <div class="choice">
+        <div class="player">
+          <p>Player selected <span class="blink">:</span></p>
+          <p id="playerChoice" class="important"></p>
+        </div>
+        <div class="computer">
+          <p>Computer selected <span class="blink">:</span></p>
+          <p id="computerChoice" class="important"></p>
+        </div>
+      </div>
+      <div id="coin">
+        <div class="side-a">Tails</div>
+        <div class="side-b">Heads</div>
+      </div>
+      <div class="points">
+        <div class="player-points">
+          <p>Player <span class="blink">:</span></p>
+          <p id="playerPoints" class="important">0</p>
+        </div>
+        <div class="computer-points">
+          <p>Computer <span class="blink">:</span></p>
+          <p id="computerPoints" class="important">0</p>
+        </div>
+      </div>
+      <h3>Make a choice:</h3>
+      <div class="options">
+        <button id="heads" class="btn">Heads</button>
+        <button id="tails" class="btn">Tails</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

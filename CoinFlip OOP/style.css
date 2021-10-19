@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+  background: #fff;
+  color: #000;
+}
+/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+
+body {
+  font-size: 1.4rem;
+  text-rendering: optimizeLegibility;
+}
+/* sets the base font size for the document; turns on kerning pairs and ligatures */
+
+body,
+ul,
+ol,
+dl {
+  margin: 0;
+}
+article,
+aside,
+audio,
+footer,
+header,
+nav,
+section,
+video {
+  display: block;
+}
+
+/* ensures that older browsers will display HTML5 elements correctly */
+
+h1 {
+  font-size: 1.4rem;
+}
+/* begins to set up font sizes relative to base rem – h1 has been used as an example */
+
+p {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+/* sets hyphenation by default on paragraphs */
+
+textarea {
+  resize: vertical;
+}
+/* changes textarea resizing from "both" (UA default) to vertical only */
+
+table {
+  border-collapse: collapse;
+}
+td {
+  padding: 0.5rem;
+}
+/* causes tables to actually look like tables */
+
+img {
+  border: none;
+  max-width: 100%;
+}
+/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0px;
+}
+/* removes the inner border effect from focused buttons for form elements in Firefox */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
+
+input:required:after {
+  color: #f00;
+  content: " *";
+}
+/* sets up required form fields with the conventional following red asterix */
+input[type="email"]:invalid {
+  background: #f00;
+}
+/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
+
+.right {
+  float: right;
+  margin-left: 2rem;
+  clear: right;
+}
+.left {
+  float: left;
+  margin-right: 2rem;
+  clear: left;
+}
+/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
+
+sub,
+sup {
+  line-height: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+}
+/* Styling the title */
+h1 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+/* Styling the choice */
+.choice {
+  display: flex;
+  justify-content: center;
+}
+.choice .player {
+  display: flex;
+  margin-right: 15px;
+}
+.choice .computer {
+  display: flex;
+  margin-left: 15px;
+}
+/* Styling image */
+
+/* Styling the point system */
+.points {
+  display: flex;
+  justify-content: space-between;
+}
+.points .player-points {
+  display: flex;
+  margin-right: 15px;
+}
+.points .computer-points {
+  display: flex;
+  margin-left: 15px;
+}
+.container h3 {
+  display: flex;
+  justify-content: center;
+}
+.container .options {
+  display: flex;
+  justify-content: space-around;
+}
+.container .options .btn {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+#heads {
+  background-color: #3e3e3e;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+}
+#tails {
+  background-color: #bb0000;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+}
+.container .important {
+  font-weight: bold;
+  padding-left: 10px;
+  /* color: ; */
+}
+/* Blinks */
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Coin flip animation */
+#coin {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#coin div {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+}
+.side-a {
+  background-color: #bb0000;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-b {
+  background-color: #3e3e3e;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#coin {
+  transition: -webkit-transform 1s ease-in;
+  -webkit-transform-style: preserve-3d;
+}
+#coin div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+.side-a {
+  z-index: 100;
+}
+.side-b {
+  -webkit-transform: rotateY(-180deg);
+}
+
+#coin.heads {
+  /* -webkit-animation: flipHeads 3s ease-out forwards;
+  -moz-animation: flipHeads 3s ease-out forwards;
+  -o-animation: flipHeads 3s ease-out forwards;
+  animation: flipHeads 3s ease-out forwards; */
+  -webkit-animation: flipTails 3s ease-out forwards;
+  -moz-animation: flipTails 3s ease-out forwards;
+  -o-animation: flipTails 3s ease-out forwards;
+  animation: flipTails 3s ease-out forwards;
+}
+#coin.tails {
+  -webkit-animation: flipHeads 3s ease-out forwards;
+  -moz-animation: flipHeads 3s ease-out forwards;
+  -o-animation: flipHeads 3s ease-out forwards;
+  animation: flipHeads 3s ease-out forwards;
+  /* -webkit-animation: flipTails 3s ease-out forwards;
+  -moz-animation: flipTails 3s ease-out forwards;
+  -o-animation: flipTails 3s ease-out forwards;
+  animation: flipTails 3s ease-out forwards; */
+}
+
+@-webkit-keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1800deg);
+    -moz-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
+}
+@-webkit-keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(1980deg);
+    -moz-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
+  }
+}
+
+/* disabled buttons */
+#heads:disabled,
+#tails:disabled {
+  background-color: gray;
+  color: #000;
+  cursor: not-allowed;
+}
