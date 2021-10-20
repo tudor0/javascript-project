@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Body */
+
+html,
+body {
+  height: 100vh;
+  max-height: 100vh;
+  font-family: "Montserrat", Georgia, "Times New Roman", Times, serif;
+  background-color: #d3d3d3;
+}
+
+/* Container */
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.container .date-container {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container .date-container h2 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.container .date-container .data-input {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Date input styling */
+
+.container .date-container .data-input input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  width: 190px;
+}
+.container .date-container .data-input [type="date"] {
+  background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat;
+  font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+.container
+  .date-container
+  .data-input
+  [type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+.container
+  .date-container
+  .data-input
+  [type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Button styling */
+
+.container .date-container .data-input .btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-left: 3px solid black;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+.container .date-container .data-input .btn:hover {
+  border: none;
+  /* border-bottom: 3px solid black; */
+}
+/* Countdown timer styling */
+#countdown {
+  margin-top: 350px;
+  display: flex;
+  justify-content: center;
+}
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+/* Blinks */
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
