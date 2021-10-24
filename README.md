@@ -1,2 +1,2 @@
-# 100+ Javascript Projects
-I'm not sure if I'll get to 100, but this is the plan: 100 JavaScript Projects for beginners, I will try to write my code with as many comments I believe are necessary so anyone that looks at it may understand and/or learn something.
+# 20 Javascript Projects
+20 simple vanilla JS projects, for anyone that is starting this journey. I have included some OOP projects, Enjoy!
